@@ -299,7 +299,7 @@ function getChromebookList() {
         redirect: 'follow'
     };
 
-    var url = "https://admin.googleapis.com/admin/directory/v1/customer/C03ea4clo/devices/chromeos?OrderBy=LAST_SYNC&maxResults=1000";
+    var url = "https://admin.googleapis.com/admin/directory/v1/customer/C019q0wqs/devices/chromeos?OrderBy=LAST_SYNC&maxResults=1000";
 
     devices = []; // A global array to populate with JSON objects
 
