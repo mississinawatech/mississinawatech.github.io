@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="tiger.png" type="image/x-icon" />
+    </head>
+    <body onload="onLoad()">
+        <header>
+            <img src="tiger.png" alt="Tiger" width="100" height="100">
+            <h1>Repair Label Generator</h1>
+            <button type="button" onclick="oauthSignIn()" class="sign-in-button">Sign In</button>
+            <p class="timer" id="timer"></p>
+            <p>&#8226;</p>
+            <p class="timer" id="status"></p>
+        </header>
+        
+        <main>
+            <form id="label0">
+                <ul class="flex-outer">
+                    <li>
+                        <p>Owner</p>
+                        <input id="owner" placeholder="John Doe">
+                    </li>
+                    <li>
+                        <p>Model</p>
+                        <input id="model" placeholder="Dell 3110">
+                        <!-- <select name="model" id="model">
+                            <option value="dell-3100-2in1">Dell 3100 2-in-1</option>
+                            <option value="dell-3100">Dell 3100</option>
+                            <option value="dell-3110">Dell 3110</option>
+                            <option value="lenovo-300e">Lenovo 300e</option>
+                            <option value="hpg5">HP G5</option>
+                        </select> -->
+                    </li>
+                    <li>
+                        <p>Issue</p>
+                        <textarea id="issue" name="issue" rows="4" cols="50" placeholder="The computer is not working because..."></textarea>
+                    </li>
+                    <li>
+                        <p>Asset ID</p>
+                        <input id="asset-id" oninput="populateById(this.parentNode.parentNode.parentNode)" placeholder="CB-123-45">
+
+                        <div class="asset-id-dropdown" id="asset-id-dropdown">
+                            <select name="id-select" onChange="updateDropdownId(this.parentNode.parentNode.parentNode.parentNode, this.value)" id="id-select">
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <p>S/N</p>
+                        <input id="serial-number" oninput="populateBySerialNumber(this.parentNode.parentNode.parentNode)" placeholder="ABC1234">
+                    </li>
+                    <li>
+                        <p>Extra Info</p>
+                        <textarea id="extra-info" name="extra-info" rows="4" cols="50" placeholder="The broken key is attached...">None</textarea>
+                    </li>
+                    <li>
+                        <p>Touch</p>
+                        <select id="touchscreen" name="cars">
+                            <option value="Yes">Yes</option>
+                            <option selected="selected" value="No">No</option>
+                        </select>
+                    </li>
+                </ul>
+            </form>
+
+            <button id="new-label" class="new-label-button" onclick="newLabel()">&#43;</button>
+            <button id="export-to-sheets" class="export-button" onclick="exportToSheets()">
+                <img src="sheetsLogo.png" class="export-button-image" alt="Tiger" height="60" />
+            </button>
+            <!-- <button id="get-chromebooks" onclick="getChromebookList()">Get All Chromebooks</button> -->
+        </main>
+
+        <div class="message-box" id="message-box"></div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,234 @@
+html {
+    --header-color: rgb(30, 30, 33);
+    --page-color: rgb(50, 50, 53);
+    --page-color2: rgb(60, 60, 62);
+    --page-color3: rgb(70, 70, 72);
+    --page-color4: rgb(80, 80, 82);
+    --page-border-color: rgb(155, 155, 155);
+    --text-color: rgb(225, 225, 225);
+    --popup-color: rgba(30, 30, 33, 0.9);
+
+    --form-margin: 10px;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--page-color);
+    color: var(--text-color);
+    font-family: monospace;
+    font-size: 25px;
+}
+
+header {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--header-color);
+    border: 2px solid rgb(200, 200, 200, 0.5);
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+}
+
+hr {
+    margin-top: 0px;
+    border-color: rgb(200, 200, 200, 0.5);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 45px;
+    margin: 10px;
+}
+
+form {
+    background-color: var(--page-color2);
+    border-radius: 10px;
+    border-color: var(--page-border-color);
+    border-width: 5px;
+    border-style: solid;
+    display: table;
+    width: auto;
+    margin: 10px;
+}
+
+button {
+    background-color: var(--page-color);
+    border-radius: 10px;
+    border-color: var(--page-border-color);
+    border-width: 1px;
+    border-style: solid;
+    margin-left: 10px;
+    color: inherit;
+    transition: background-color 0.4s cubic-bezier(0.075, 0.82, 0.165, 1), margin-left 0.4s cubic-bezier(0.075, 0.82, 0.165, 1), padding 0.4s cubic-bezier(0.075, 0.82, 0.165, 1), font-size 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding: 8px;
+}
+
+button:hover {
+    background-color: var(--page-color2);
+    margin-left: 13px;
+}
+
+/* Message Box */
+.message-box {
+    position: fixed;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    bottom: -20px;
+    height: 20px;
+    background-color: var(--popup-color);
+    border: 0px;
+
+    transition: height 0.4s cubic-bezier(0.075, 0.82, 0.165, 1), bottom 0.4s cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+.message-box-displayed {
+    height: 75px;
+    bottom: 0px;
+}
+
+/* New Label Button */
+
+.new-label-button {
+    background-color: var(--page-color2);
+    font-size: 70px;
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    transition: rotate 0.4s cubic-bezier(0.075, 0.82, 0.165, 1), background-color 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin: 10px;
+}
+
+.new-label-button:hover {
+    background-color: var(--page-color3);
+    rotate: 90deg;
+    margin: 10px;
+}
+
+.new-label-button:active {
+    background-color: var(--page-color4);
+}
+
+/* Sign In Button */
+
+.sign-in-button:hover {
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Export Button */
+
+.export-button {
+    background-color: var(--page-color2);
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    transition: background-color 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin: 10px;
+}
+
+.export-button:hover {
+    background-color: var(--page-color3);
+    margin: 10px;
+}
+
+.export-button:active {
+    background-color: var(--page-color4);
+}
+
+.export-button-image {
+    height: 60px;
+    transition: height 0.4s cubic-bezier(0.075, 0.82, 0.165, 1), width 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.export-button:hover .export-button-image {
+    height: 70px;
+}
+
+/* Form */
+
+.flex-outer {
+    margin: 0px;
+    padding: 0px;
+    display: flexbox;
+}
+
+.flex-outer li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 15px 15px;
+}
+
+.flex-outer li p {
+    flex: 1 0 50px;
+    max-width: 70px;
+    margin: 0px;
+}
+
+input, input:-webkit-autofill, textarea, select {
+    background-color: var(--page-color);
+    border-color: var(--page-border-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    padding: 6px;
+    font-size: 15px;
+    border-style: solid;
+    margin-left: 20px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--text-color);
+    caret-color: var(--text-color)
+}
+
+.asset-id-dropdown {
+    display: none;
+    position: relative;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--page-border-color);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    visibility: hidden;
+}
+
+/* Timer */
+
+.timer {
+    margin: 0px 15px;
+}
