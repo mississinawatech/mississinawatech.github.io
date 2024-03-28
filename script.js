@@ -2,11 +2,11 @@ const labelTemplate = document.getElementById("label0").cloneNode(true); // Clon
 var lastLabelId = 0; // The number of the last label id
 var messageBoxLocked = false;
 
-var clientId = "537591206298-9blrp4f9r00s5uo6rat0phlpmijmf25v.apps.googleusercontent.com";
-var clientSecret = "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";
+var clientId = "622742585541-ra14g5hujq25gi5kbjj96a470ebjcae5.apps.googleusercontent.com";
+var clientSecret = "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";
 
-var spreadsheetId = "1wVnZ-ikLlnOH0Lq78cNkp30wW3ukTicgZedR_fmJEXA";
-var touchDictionaryId = "1qPPe1Yk7SGe1jPuMDZxsPJjfW3dpZLe_nuU_eUZWVkA";
+var spreadsheetId = "1j8J-HuPIwkLZCAPeSBgRK5macqOwLM81oY_0lqccmSU";
+var touchDictionaryId = "1XU9F5bJbSnZMkl2RzZZDT1QxmU-WhGOFj6yj6aVHWuU";
 var templateSheetId = "982309210";
 var currentSheetId = "";
 var currentSheetName = "";
